@@ -1,0 +1,126 @@
+html{scroll-behavior: smooth;}
+
+/* Scroll bar minimalista */
+@media(min-width: 1024px){
+    .scrollbar::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    .scrollbar::-webkit-scrollbar:vertical {
+        width:5px;
+        background-color: black;
+    }
+
+    .scrollbar::-webkit-scrollbar-button:increment,.scrollbar::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    .scrollbar::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background-color: #dcdcdc;
+        border-radius: 9999px;
+        border: 2px solid #dcdcdc;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+}
+
+#container-princial{
+    background-image: linear-gradient(to bottom, #0000006e 25%, #000000fe 100%), url('/public/dist/img/bg-1.jpg');
+}
+
+/* Slash -> name-skill.blade.php */
+.slash{
+    animation: slash infinite 0.6s;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: textAppear 0.1s linear forwards;
+}
+
+#light-sun{
+    box-shadow: 0 0 50px 10px #FFE698;
+    filter: blur(150px);
+    animation: iluminacion 7s ease-in-out infinite alternate;
+}
+
+#sun{
+    animation: levitar 6s ease-in-out infinite alternate;
+}
+
+#text-levitating-1{
+    animation: levitating-1 6s ease-in-out infinite alternate-reverse;
+    color: rgba(255, 255, 255, 0.565);
+}
+
+#text-levitating-2{
+    animation: levitating-2 7s ease-in-out infinite alternate-reverse;
+    color: rgba(255, 255, 255, 0.834);
+}
+
+@keyframes iluminacion{
+    0%{
+        box-shadow: 0 0 80px 20px #f43636;
+    }
+    50%{
+        box-shadow: 0 0 100px 50px #f67355;
+    }
+    100%{
+        box-shadow: 0 0 130px 70px #FFC86E;
+    }
+}
+
+@keyframes levitar {
+    0%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(25px);
+    }
+}
+
+@keyframes levitar2 {
+    0%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes levitating-1{
+    0%{
+        transform: translateY(-5px);
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: translateY(5px);
+        transform: rotate(2deg);
+    }
+    100%{
+        transform: translate(-5px);
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes levitating-2{
+    0%{
+        transform: translateY(6px);
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: translateY(-5px);
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: translate(7px);
+        transform: rotate(-5deg);
+    }
+}
