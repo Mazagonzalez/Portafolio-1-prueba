@@ -105,7 +105,7 @@
 
         <div class="text-white bg-black w-all-pantalla center-content">
             <div>
-                Cont #3
+                Cont #3 {{-- pendiente por terminar --}}
             </div>
         </div>
     </div>
